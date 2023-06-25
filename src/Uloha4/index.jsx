@@ -21,7 +21,12 @@ export const Uloha4 = () => {
   return (
     <div className="carousel">
       <button
-        onClick={() => setActiveImg(activeImg - 1)}
+        onClick={(e) => {
+          activeImg === -1
+            ? (e.currentTarget.disabled = true)
+            : setActiveImg(activeImg - 1);
+          console.log(activeImg);
+        }}
         className="carousel__predchozi"
         aria-label="předchozí"
       >
@@ -31,7 +36,12 @@ export const Uloha4 = () => {
         <img className="carousel__image" src={images[activeImg]} alt="" />
       </div>
       <button
-        onClick={() => setActiveImg(activeImg + 1)}
+        onClick={(e) => {
+          activeImg === 4
+            ? (e.currentTarget.disabled = true)
+            : setActiveImg(activeImg + 1);
+          console.log(activeImg);
+        }}
         className="carousel__dalsi"
         aria-label="další"
       >

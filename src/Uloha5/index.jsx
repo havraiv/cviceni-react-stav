@@ -14,7 +14,9 @@ export const Uloha5 = () => {
         onClick={() => {
           setToggleMenu(!toggleMenu);
         }}
-        className="hamburger"
+        className={
+          toggleMenu === false ? 'hamburger' : 'hamburger hamburger--otevrene'
+        }
         aria-label="menu"
       >
         <span></span>

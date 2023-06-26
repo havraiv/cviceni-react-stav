@@ -17,7 +17,6 @@ const images = [
 
 export const Uloha4 = () => {
   const [activeImg, setActiveImg] = useState(0);
-  console.log(activeImg);
   return (
     <div className="carousel">
       <button

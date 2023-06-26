@@ -13,7 +13,6 @@ export const Uloha5 = () => {
       <button
         onClick={() => {
           setToggleMenu(!toggleMenu);
-          console.log(toggleMenu);
         }}
         className="hamburger"
         aria-label="menu"
@@ -22,20 +21,22 @@ export const Uloha5 = () => {
         <span></span>
         <span></span>
       </button>
-      <ul>
-        <li>
-          <a href="#o-nas">O nás</a>
-        </li>
-        <li>
-          <a href="#co-delame">Co děláme</a>
-        </li>
-        <li>
-          <a href="#kontakty">Kontakty</a>
-        </li>
-        <li>
-          <a href="#cenik">Ceník</a>
-        </li>
-      </ul>
+      {toggleMenu === true ? (
+        <ul>
+          <li>
+            <a href="#o-nas">O nás</a>
+          </li>
+          <li>
+            <a href="#co-delame">Co děláme</a>
+          </li>
+          <li>
+            <a href="#kontakty">Kontakty</a>
+          </li>
+          <li>
+            <a href="#cenik">Ceník</a>
+          </li>
+        </ul>
+      ) : null}
     </>
   );
 };

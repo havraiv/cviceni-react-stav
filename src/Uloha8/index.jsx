@@ -5,19 +5,14 @@ import React, { useState } from 'react';
 // Zadání 3: Po kliknutí na tlačítko změň `možná` na `ano`, `ano` na `ne`, případně `ne` na `možná`.
 
 export const Uloha8 = () => {
-  const [state, setState] = useState('možná');
+  const [index, setIndex] = useState(0);
+  const answers = ['možná', 'ano', 'ne'];
   return (
     <>
-      <h3>Prší v Brně: {state}</h3>
+      <h3>Prší v Brně: {answers[index]}</h3>
       <button
         onClick={() => {
-          state === 'možná'
-            ? setState('ano')
-            : state === 'ano'
-            ? setState('ne')
-            : state === 'ne'
-            ? setState('možná')
-            : null;
+          answers.length === index + 1 ? setIndex(0) : setIndex(index + 1);
         }}
       >
         změnit
